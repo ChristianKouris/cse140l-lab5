@@ -1,0 +1,374 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do top_level5_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Christian/Desktop/lab5 {C:/Users/Christian/Desktop/lab5/lfsr6.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:53 on Jun 12,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Christian/Desktop/lab5" C:/Users/Christian/Desktop/lab5/lfsr6.sv 
+# -- Compiling module lfsr6
+# 
+# Top level modules:
+# 	lfsr6
+# End time: 23:32:53 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Christian/Desktop/lab5 {C:/Users/Christian/Desktop/lab5/dat_mem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:53 on Jun 12,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Christian/Desktop/lab5" C:/Users/Christian/Desktop/lab5/dat_mem.sv 
+# -- Compiling module dat_mem
+# 
+# Top level modules:
+# 	dat_mem
+# End time: 23:32:53 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Christian/Desktop/lab5 {C:/Users/Christian/Desktop/lab5/top_level5_sol.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:53 on Jun 12,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Christian/Desktop/lab5" C:/Users/Christian/Desktop/lab5/top_level5_sol.sv 
+# -- Compiling module top_level5
+# 
+# Top level modules:
+# 	top_level5
+# End time: 23:32:53 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/dat_mem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:06 on Jun 12,2020
+# vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/dat_mem.sv 
+# -- Compiling module dat_mem
+# 
+# Top level modules:
+# 	dat_mem
+# End time: 23:33:06 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/Lab4_5_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:06 on Jun 12,2020
+# vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/Lab4_5_tb.sv 
+# -- Compiling module Lab5_tb
+# 
+# Top level modules:
+# 	Lab5_tb
+# End time: 23:33:06 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/lfsr6.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:06 on Jun 12,2020
+# vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/lfsr6.sv 
+# -- Compiling module lfsr6
+# 
+# Top level modules:
+# 	lfsr6
+# End time: 23:33:06 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/top_level5_sol.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:33:06 on Jun 12,2020
+# vlog -reportprogress 300 -work work C:/Users/Christian/Desktop/lab5/top_level5_sol.sv 
+# -- Compiling module top_level5
+# 
+# Top level modules:
+# 	top_level5
+# End time: 23:33:06 on Jun 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.Lab5_tb
+# vsim work.Lab5_tb 
+# Start time: 23:33:30 on Jun 12,2020
+# Loading sv_std.std
+# Loading work.Lab5_tb
+# Loading work.top_level5
+# Loading work.dat_mem
+# Loading work.lfsr6
+add wave sim:/Lab5_tb/dut/*
+run -all
+# preamble length =  10
+# tap pattern           2 selected
+# LFSR starting pattern = 000001
+# original message string length =          37
+# embedded leading underscore count =           0
+# run encryption of this original message: 
+# Mr_Watson_come_here_I_want_to_see_you
+#  
+# LFSR_ptrn = 30, LFSR_init = 01 01
+# here is the original message with _ preamble padding
+# __________Mr_Watson_come_here_I_want_to_see_you_________________
+# 
+# here is the padded and encrypted pattern in ASCII
+# ^][WO~\YSG|PZ]u]`HaA^UYMNKb|yf{{~sKIYth]x^iUvFyREjuJtHp@`acgo^
+# 
+# here is the padded pattern in hex
+#  5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 4d 72 5f 57 61 74 73 6f 6e 5f 63 6f 6d 65 5f 68 65 72 65 5f 49 5f 77 61 6e 74 5f 74 6f 5f 73 65 65 5f 79 6f 75 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f
+# 
+# mm =           0  lfsr_trial[mm] = 3e, LFSR[6] = 03
+# mm =           1  lfsr_trial[mm] = 30, LFSR[6] = 03
+# mm =           2  lfsr_trial[mm] = 03, LFSR[6] = 03
+# foundit =   2 LFSR[6] = 03
+# mm =           3  lfsr_trial[mm] = 2e, LFSR[6] = 03
+# mm =           4  lfsr_trial[mm] = 1f, LFSR[6] = 03
+# mm =           5  lfsr_trial[mm] = 39, LFSR[6] = 03
+# foundit fer sure =   2
+#   7th core = xx LFSR = 01
+#   7th core = 5e LFSR = 01
+#   8th core = 5e LFSR = 02
+#   8th core = 5d LFSR = 02
+#   9th core = 5d LFSR = 04
+#   9th core = 5b LFSR = 04
+#  10th core = 5b LFSR = 08
+#  10th core = 57 LFSR = 08
+#  11th core = 57 LFSR = 10
+#  11th core = 4f LFSR = 10
+#  12th core = 4f LFSR = 21
+#  12th core = 7e LFSR = 21
+#  13th core = 7e LFSR = 03
+#  13th core = 5c LFSR = 03
+#  14th core = 5c LFSR = 06
+#  14th core = 59 LFSR = 06
+#  15th core = 59 LFSR = 0c
+#  15th core = 53 LFSR = 0c
+#  16th core = 53 LFSR = 18
+#  16th core = 47 LFSR = 18
+#  17th core = 47 LFSR = 31
+#  17th core = 7c LFSR = 31
+#  18th core = 7c LFSR = 22
+#  18th core = 50 LFSR = 22
+#  19th core = 50 LFSR = 05
+#  19th core = 5a LFSR = 05
+#  20th core = 5a LFSR = 0a
+#  20th core = 5d LFSR = 0a
+#  21th core = 5d LFSR = 14
+#  21th core = 75 LFSR = 14
+#  22th core = 75 LFSR = 29
+#  22th core = 5d LFSR = 29
+#  23th core = 5d LFSR = 13
+#  23th core = 60 LFSR = 13
+#  24th core = 60 LFSR = 27
+#  24th core = 48 LFSR = 27
+#  25th core = 48 LFSR = 0f
+#  25th core = 61 LFSR = 0f
+#  26th core = 61 LFSR = 1e
+#  26th core = 41 LFSR = 1e
+#  27th core = 41 LFSR = 3d
+#  27th core = 5e LFSR = 3d
+#  28th core = 5e LFSR = 3a
+#  28th core = 55 LFSR = 3a
+#  29th core = 55 LFSR = 34
+#  29th core = 59 LFSR = 34
+#  30th core = 59 LFSR = 28
+#  30th core = 4d LFSR = 28
+#  31th core = 4d LFSR = 11
+#  31th core = 4e LFSR = 11
+#  32th core = 4e LFSR = 23
+#  32th core = 4b LFSR = 23
+#  33th core = 4b LFSR = 07
+#  33th core = 62 LFSR = 07
+#  34th core = 62 LFSR = 0e
+#  34th core = 7c LFSR = 0e
+#  35th core = 7c LFSR = 1c
+#  35th core = 79 LFSR = 1c
+#  36th core = 79 LFSR = 39
+#  36th core = 66 LFSR = 39
+#  37th core = 66 LFSR = 32
+#  37th core = 7b LFSR = 32
+#  38th core = 7b LFSR = 24
+#  39th core = 7b LFSR = 09
+#  39th core = 7e LFSR = 09
+#  40th core = 7e LFSR = 12
+#  40th core = 73 LFSR = 12
+#  41th core = 73 LFSR = 25
+#  41th core = 4b LFSR = 25
+#  42th core = 4b LFSR = 0b
+#  42th core = 7f LFSR = 0b
+#  43th core = 7f LFSR = 16
+#  43th core = 49 LFSR = 16
+#  44th core = 49 LFSR = 2d
+#  44th core = 59 LFSR = 2d
+#  45th core = 59 LFSR = 1b
+#  45th core = 74 LFSR = 1b
+#  46th core = 74 LFSR = 37
+#  46th core = 68 LFSR = 37
+#  47th core = 68 LFSR = 2e
+#  47th core = 5d LFSR = 2e
+#  48th core = 5d LFSR = 1d
+#  48th core = 78 LFSR = 1d
+#  49th core = 78 LFSR = 3b
+#  49th core = 5e LFSR = 3b
+#  50th core = 5e LFSR = 36
+#  50th core = 69 LFSR = 36
+#  51th core = 69 LFSR = 2c
+#  51th core = 55 LFSR = 2c
+#  52th core = 55 LFSR = 19
+#  52th core = 76 LFSR = 19
+#  53th core = 76 LFSR = 33
+#  53th core = 46 LFSR = 33
+#  54th core = 46 LFSR = 26
+#  54th core = 79 LFSR = 26
+#  55th core = 79 LFSR = 0d
+#  55th core = 52 LFSR = 0d
+#  56th core = 52 LFSR = 1a
+#  56th core = 45 LFSR = 1a
+# underscores to  10 th
+#   0th core = 5f
+#   0th core = 4d
+#   1th core = 4d
+#   1th core = 72
+#   2th core = 72
+#   2th core = 5f
+#   3th core = 5f
+#   3th core = 57
+#   4th core = 57
+#   4th core = 61
+#   5th core = 61
+#   5th core = 74
+#   6th core = 74
+#   6th core = 73
+#   7th core = 73
+#   7th core = 6f
+#   8th core = 6f
+#   8th core = 6e
+#   9th core = 6e
+#   9th core = 5f
+#  10th core = 5f
+#  10th core = 63
+#  11th core = 63
+#  11th core = 6f
+#  12th core = 6f
+#  12th core = 6d
+#  13th core = 6d
+#  13th core = 65
+#  14th core = 65
+#  14th core = 5f
+#  15th core = 5f
+#  15th core = 68
+#  16th core = 68
+#  16th core = 65
+#  17th core = 65
+#  17th core = 72
+#  18th core = 72
+#  18th core = 65
+#  19th core = 65
+#  19th core = 5f
+#  20th core = 5f
+#  20th core = 49
+#  21th core = 49
+#  21th core = 5f
+#  22th core = 5f
+#  22th core = 77
+#  23th core = 77
+#  23th core = 61
+#  24th core = 61
+#  24th core = 6e
+#  25th core = 6e
+#  25th core = 74
+#  26th core = 74
+#  26th core = 5f
+#  27th core = 5f
+#  27th core = 74
+#  28th core = 74
+#  28th core = 6f
+#  29th core = 6f
+#  29th core = 5f
+#  30th core = 5f
+#  30th core = 73
+#  31th core = 73
+#  31th core = 65
+#  32th core = 65
+#  33th core = 65
+#  33th core = 5f
+#  34th core = 5f
+#  34th core = 79
+#  35th core = 79
+#  35th core = 6f
+#  36th core = 6f
+#  36th core = 75
+#  37th core = 75
+#  37th core = 5f
+#  38th core = 5f
+#  39th core = 5f
+#  40th core = 5f
+#  40th core = xx
+#  41th core = xx
+#  42th core = xx
+#  43th core = xx
+#  44th core = xx
+#  45th core = xx
+#  46th core = xx
+#  47th core = xx
+#  48th core = xx
+#  49th core = xx
+#  50th core = xx
+#  51th core = xx
+#  52th core = xx
+#  53th core = xx
+#  54th core = xx
+#  54th core = 5e
+#  55th core = 5e
+#  55th core = 5d
+#  56th core = 5d
+#  56th core = 5b
+#  57th core = 5b
+#  57th core = 57
+#  58th core = 57
+#  58th core = 4f
+#  59th core = 4f
+#  59th core = 7e
+#  60th core = 7e
+#  60th core = 5c
+#  61th core = 5c
+#  61th core = 59
+#  62th core = 59
+#  62th core = 53
+#  63th core = 53
+#  63th core = 47
+# done at time              1535000
+# run decryption:
+# ct =           0
+#           0 bench msg: 4d dut msg: 4d    M
+#           1 bench msg: 72 dut msg: 72    r
+#           2 bench msg: 5f dut msg: 5f    _
+#           3 bench msg: 57 dut msg: 57    W
+#           4 bench msg: 61 dut msg: 61    a
+#           5 bench msg: 74 dut msg: 74    t
+#           6 bench msg: 73 dut msg: 73    s
+#           7 bench msg: 6f dut msg: 6f    o
+#           8 bench msg: 6e dut msg: 6e    n
+#           9 bench msg: 5f dut msg: 5f    _
+#          10 bench msg: 63 dut msg: 63    c
+#          11 bench msg: 6f dut msg: 6f    o
+#          12 bench msg: 6d dut msg: 6d    m
+#          13 bench msg: 65 dut msg: 65    e
+#          14 bench msg: 5f dut msg: 5f    _
+#          15 bench msg: 68 dut msg: 68    h
+#          16 bench msg: 65 dut msg: 65    e
+#          17 bench msg: 72 dut msg: 72    r
+#          18 bench msg: 65 dut msg: 65    e
+#          19 bench msg: 5f dut msg: 5f    _
+#          20 bench msg: 49 dut msg: 49    I
+#          21 bench msg: 5f dut msg: 5f    _
+#          22 bench msg: 77 dut msg: 77    w
+#          23 bench msg: 61 dut msg: 61    a
+#          24 bench msg: 6e dut msg: 6e    n
+#          25 bench msg: 74 dut msg: 74    t
+#          26 bench msg: 5f dut msg: 5f    _
+#          27 bench msg: 74 dut msg: 74    t
+#          28 bench msg: 6f dut msg: 6f    o
+#          29 bench msg: 5f dut msg: 5f    _
+#          30 bench msg: 73 dut msg: 73    s
+#          31 bench msg: 65 dut msg: 65    e
+#          32 bench msg: 65 dut msg: 65    e
+#          33 bench msg: 5f dut msg: 5f    _
+#          34 bench msg: 79 dut msg: 79    y
+#          35 bench msg: 6f dut msg: 6f    o
+#          36 bench msg: 75 dut msg: 75    u
+# ** Note: $stop    : C:/Users/Christian/Desktop/lab5/Lab4_5_tb.sv(132)
+#    Time: 1555 ns  Iteration: 0  Instance: /Lab5_tb
+# Break in NamedBeginStat initial_loop at C:/Users/Christian/Desktop/lab5/Lab4_5_tb.sv line 132
